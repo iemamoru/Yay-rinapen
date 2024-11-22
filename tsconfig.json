@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "target": "ES5",
+      "module": "CommonJS",
+      "strict":  false,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "moduleResolution": "node",
+      "outDir": "./dist",
+      "rootDir": "./source",
+      "lib": ["ES5", "DOM"],
+      "resolveJsonModule": true,
+      "typeRoots": ["./node_modules/@types"],
+      "downlevelIteration": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+    },
+    "include": ["source/**/*", "source/views"],
+    "exclude": ["node_modules", "dist"]
+  }

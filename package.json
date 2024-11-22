@@ -2,9 +2,9 @@
   "type": "commonjs",
   "name": "yay-rinapen",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "ejs": "ejs-cli --base-dir ejs/ \"index.ejs\" --out dest/"
+    "build": "npx tsc && npx webpack --config webpack.config.js",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
@@ -17,14 +17,37 @@
     "@types/express": "^5.0.0",
     "agora-rtc-sdk-ng": "^4.21.0",
     "agora-rtm-sdk": "^1.5.1-20",
+    "axios": "^1.7.7",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "mongodb": "^6.10.0"
+    "https-proxy-agent": "^7.0.5",
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.7.3",
+    "node-fetch": "^2.6.6"
   },
   "devDependencies": {
     "@types/node": "^22.8.1",
+    "@types/node-fetch": "2.x",
+    "browserify-zlib": "^0.2.0",
+    "crypto-browserify": "^3.12.1",
+    "css-loader": "^7.1.2",
+    "ejs": "^3.1.10",
+    "ejs-plain-loader": "^1.4.1",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "querystring-es3": "^0.2.1",
+    "stream-http": "^3.2.0",
+    "timers-browserify": "^2.0.12",
+    "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "vm-browserify": "^1.1.2",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }

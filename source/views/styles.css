@@ -1,0 +1,179 @@
+/* 背景設定 */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #343a40;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+.hidden {
+    display: none;
+}
+
+.menupanel {
+    max-width: 600px;
+    background: linear-gradient(135deg, #3a86ff, #8338ec, #ff006e);
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden; /* はみ出し部分を隠す */
+}
+
+fieldset {
+    border: 1px solid #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+legend, .form-check-label, .form-label {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+button.btn-primary {
+    background-color: #ffffff;
+    color: #ff006e;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button.btn-primary:hover {
+    background-color: #ff006e;
+    color: #ffffff;
+}
+
+/* 通話詳細カードのデザイン */
+.conference-card {
+    max-width: 100%;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.9); /* 背景を透かす */
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* 内容がはみ出した場合スクロール */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* カードヘッダーのデザイン */
+.conference-header {
+    background-color: rgba(0, 123, 255, 0.8); /* 半透明の青色 */
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 参加者リスト部分のスクロール設定 */
+.user-list {
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 10px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* 参加者のバッジの余白を詰める */
+.participant-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(240, 240, 240, 0.5);
+}
+.participant-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+
+/* バッジの色設定 */
+.badge.bg-pink {
+    background-color: #ff69b4; /* Pink for Host */
+    color: white;
+}
+
+.badge.bg-blue {
+    background-color: #007bff; /* Blue for Moderator */
+    color: white;
+}
+
+.badge.bg-green {
+    background-color: #28a745; /* Green for Online */
+    color: white;
+}
+
+.badge.bg-gray {
+    background-color: #6c757d; /* Gray for Offline */
+    color: white;
+}
+
+/* ローディングメッセージ */
+.loading-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.spinner-border {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+/* ダークモード */
+.dark-mode {
+    background-color: #222222;
+}
+
+.dark-mode .menupanel {
+    background: linear-gradient(135deg, #1f2937, #4b5563, #9ca3af);
+    color: #e5e7eb;
+}
+
+.dark-mode fieldset {
+    background-color: rgba(34, 34, 34, 0.8);
+}
+
+.dark-mode legend, .dark-mode .form-check-label, .dark-mode h2 {
+    color: #e5e7eb;
+}
+
+.dark-mode button.btn-primary {
+    background-color: #333333;
+    color: #9ca3af;
+}
+
+.dark-mode button.btn-primary:hover {
+    background-color: #9ca3af;
+    color: #333333;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .menupanel {
+        width: 90%;
+        padding: 1rem;
+    }
+    .conference-card {
+        padding: 0.5rem;
+    }
+}
